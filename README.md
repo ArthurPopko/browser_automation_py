@@ -41,3 +41,6 @@ Web automation on python.
    python -i ./tests/trial_of_the_stones.py 
    ```
    The "-i" flag allows you to interact your browser after the script is finished.
+   
+### Your Selenium Utility Belt:
+[Selenium Documentation](https://www.selenium.dev/selenium/docs/api/py/api.html)

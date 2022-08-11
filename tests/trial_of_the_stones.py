@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+# No page object, no optimization
 URL = 'https://techstepacademy.com/trial-of-the-stones'
 R1_LABEL = 'Another word for stone (4 letters)?'
 success_msg = 'Success!'
