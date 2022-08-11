@@ -1,13 +1,10 @@
 from selenium.webdriver.common.by import By
+from .base_page import BasePage
 
 
-class TrainingGroundPage:
-    def __init__(self, driver):
-        self.driver = driver
-        self.url = 'https://techstepacademy.com/training-ground/'
+class TrainingGroundPage(BasePage):
 
-    def go(self):
-        self.driver.get(self.url)
+    url = 'https://techstepacademy.com/training-ground/'
 
     def type_into_input(self, text):
         inpt = self.driver.find_element(By.ID, 'ipt1')

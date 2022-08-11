@@ -1,13 +1,9 @@
 from selenium.webdriver.common.by import By
+from .base_page import BasePage
 
 
-class TrailOfStones:
-    def __init__(self, driver):
-        self.driver = driver
-        self.url = 'https://techstepacademy.com/trial-of-the-stones'
-
-    def go(self):
-        self.driver.get(self.url)
+class TrailOfStones(BasePage):
+    url = 'https://techstepacademy.com/trial-of-the-stones'
 
     # Riddle of Stones
     def stone_input(self):

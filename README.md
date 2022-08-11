@@ -42,5 +42,5 @@ Web automation on python.
    ```
    The "-i" flag allows you to interact your browser after the script is finished.
    
-### Your Selenium Utility Belt:
+### Selenium Utility Belt:
 [Selenium Documentation](https://www.selenium.dev/selenium/docs/api/py/api.html)
