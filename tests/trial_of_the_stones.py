@@ -1,5 +1,6 @@
 from selenium import webdriver
 from page_objects.trail_of_stones_page import TrailOfStones
+from webdriver_manager.chrome import ChromeDriverManager
 
 # Expected variables
 R1_LABEL = 'Another word for stone (4 letters)?'
@@ -7,7 +8,7 @@ success_msg = 'Success!'
 complete_msg = 'Trial Complete'
 
 # def test_trail_of_stones():
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(ChromeDriverManager().install())
 trail_of_stones_page = TrailOfStones(driver=browser)
 trail_of_stones_page.go()
 # Riddle of Stones actions
