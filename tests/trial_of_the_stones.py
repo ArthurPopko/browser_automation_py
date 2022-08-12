@@ -50,4 +50,4 @@ trail_of_stones_page.check_btn.click()
 # browser.save_screenshot('../screenshots/scr.png')
 assert trail_of_stones_page.final_msg == complete_msg
 
-# browser.quit()
+browser.quit()
