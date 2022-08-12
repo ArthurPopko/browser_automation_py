@@ -11,26 +11,26 @@ browser = webdriver.Chrome()
 trail_of_stones_page = TrailOfStones(driver=browser)
 trail_of_stones_page.go()
 # Riddle of Stones actions
-trail_of_stones_page.stone_input().send_keys('rock')
-trail_of_stones_page.stone_answer_button().click()
-password = trail_of_stones_page.stone_result().text
+trail_of_stones_page.stone_input.input_text('rock')
+trail_of_stones_page.stone_answer_button.click()
+password = trail_of_stones_page.stone_result.text
 
 # Riddle of Secrets actions
-trail_of_stones_page.secrets_input().send_keys(password)
-trail_of_stones_page.secrets_answer_btn().click()
-trail_of_stones_page.secrets_success_msg = trail_of_stones_page.secrets_result().text
+trail_of_stones_page.secrets_input.input_text(password)
+trail_of_stones_page.secrets_answer_btn.click()
+trail_of_stones_page.secrets_success_msg = trail_of_stones_page.secrets_result.text
 assert trail_of_stones_page.secrets_success_msg == success_msg
 
 # Two Merchants actions
-richest_merchant_name = trail_of_stones_page.get_richest_merchant_name()
-trail_of_stones_page.merchant_input().send_keys(richest_merchant_name)
-trail_of_stones_page.merchant_answer_btn().click()
-trail_of_stones_page.merchant_success = trail_of_stones_page.merchant_result().text
+richest_merchant_name = trail_of_stones_page.get_richest_merchant_name
+trail_of_stones_page.merchant_input.input_text(richest_merchant_name)
+trail_of_stones_page.merchant_answer_btn.click()
+trail_of_stones_page.merchant_success = trail_of_stones_page.merchant_result.text
 assert trail_of_stones_page.merchant_success == success_msg
 
 # Final check
-trail_of_stones_page.check_btn().click()
+trail_of_stones_page.check_btn.click()
 # browser.save_screenshot('../screenshots/scr.png')
-assert trail_of_stones_page.final_msg() == complete_msg
+assert trail_of_stones_page.final_msg == complete_msg
 #
-# browser.close()
+browser.quit()
