@@ -26,20 +26,6 @@ assert trail_of_stones_page.secrets_success_msg == success_msg
 
 # Two Merchants actions
 richest_merchant = list.PageWithListings(browser.page_source).highest_wealth.name
-
-# tree = etree.HTML(browser.page_source)
-# merchant_divs = tree.findall(".//div/span/..")
-# merchant1 = merchant_divs[0]
-# merchant2 = merchant_divs[1]
-#
-# merchant1_name = merchant1.find("./span/b").text
-# merchant2_name = merchant2.find("./span/b").text
-#
-# merchant1_wealth = merchant1.find("./p").text
-# merchant2_wealth = merchant2.find("./p").text
-# print(merchant1_name, merchant1_wealth, merchant2_name, merchant2_wealth)
-
-# richest_merchant_name = trail_of_stones_page.get_richest_merchant_name
 trail_of_stones_page.merchant_input.input_text(richest_merchant)
 trail_of_stones_page.merchant_answer_btn.click()
 trail_of_stones_page.merchant_success = trail_of_stones_page.merchant_result.text
