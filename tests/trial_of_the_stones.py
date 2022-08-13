@@ -1,5 +1,6 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 
 from page_objects.trail_of_stones_page import TrailOfStones
 
@@ -9,7 +10,8 @@ success_msg = 'Success!'
 complete_msg = 'Trial Complete'
 
 # def test_trail_of_stones():
-browser = webdriver.Chrome(ChromeDriverManager().install())
+s = Service(ChromeDriverManager().install())
+browser = webdriver.Chrome(service=s)
 trail_of_stones_page = TrailOfStones(driver=browser)
 trail_of_stones_page.go()
 # Riddle of Stones actions
