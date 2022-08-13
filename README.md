@@ -27,7 +27,15 @@ Web automation on python.
    add a string in: .bashrc, bash_profile, .zshrc or .profile
    e.g.: export PATH=$PATH:~/drivers
    ```
-> !!! NOTE: Instead of using webdriver it's better to use [WebdriverManager](https://pypi.org/project/webdriver-manager/)
+**NOTE: It's strongly recommended to use [WebdriverManager](https://pypi.org/project/webdriver-manager/)**
+   ```
+   # selenium 4
+   from selenium import webdriver
+   from selenium.webdriver.chrome.service import Service as ChromeService
+   from webdriver_manager.chrome import ChromeDriverManager
+   
+   browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())) 
+   ```
 
 ### Check the selenium interacts the browser:
    ```
