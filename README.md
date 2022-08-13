@@ -27,6 +27,7 @@ Web automation on python.
    add a string in: .bashrc, bash_profile, .zshrc or .profile
    e.g.: export PATH=$PATH:~/drivers
    ```
+> !!! NOTE: Instead of using webdriver it's better to use [WebdriverManager](https://pypi.org/project/webdriver-manager/)
 
 ### Check the selenium interacts the browser:
    ```
